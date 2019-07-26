@@ -25,3 +25,7 @@ This template should work for both macOS and Linux
 Confirm everything was ran correctly by going to the following endpoint: 
     * http://localhost:8081/health/v1/marco
 
+## Changes Required For Your Project
+1. Change Port from 8081 to ####
+2. Change Project Name
+
