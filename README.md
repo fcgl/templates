@@ -17,15 +17,15 @@ This template should work for both macOS and Linux
 
 1. Download docker for your operating system
 2. From project root run the following commands:
-    * **Build:** `docker build -t template-app .`
-    * **Run:** `docker run -d=true -p 8081:8081 template-app`
+    * build and run: `docker-compose up --build`
+
 
 ## Health Endpoint
 
 Confirm everything was ran correctly by going to the following endpoint: 
-    * http://localhost:8081/health/v1/marco
+    * http://localhost:8086/health/v1/marco
 
 ## Changes Required For Your Project
-1. Change Port from 8081 to ####
+1. Change Port from 8086 to #### in Dockerfile and docker-compose.yml
 2. Change Project Name
 

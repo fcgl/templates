@@ -17,13 +17,13 @@ RUN mvn package
 
 FROM openjdk:8-slim as runtime
 # Expose the port
-EXPOSE 8081
+EXPOSE 8086
 #Set app home folder
 ENV APP_HOME /app
 #Possibility to set JVM options (https://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html)
 ENV JAVA_OPTS=""
 # Set ENV variables
-ENV PORT=8081
+ENV PORT=8086
 ENV DISCOVERY_URL="http://discovery:8761"
 
 #Create base app folder
@@ -43,3 +43,4 @@ COPY --from=builder /build/target/*.jar app.jar
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar app.jar" ]
 #Second option using shell form:
 #ENTRYPOINT exec java $JAVA_OPTS -jar app.jar $0 $@
+
